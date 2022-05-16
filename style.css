@@ -1,0 +1,43 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+
+  }
+
+  nav ul{
+   float: left;
+   margin-left: 20px;
+  }
+
+  nav ul li{
+    display: inline-block;
+    line-height: 80px
+  }
+
+  nav ul li a{
+    color: black;
+    font-size: 17px;
+    text-transform: uppercase;
+  }
+
+  body {background-color: white;
+    font-family:'Times New Roman', Times, serif
+  }
+  #nav{
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+  }
+
+  p {font-family: 'Times New Roman';
+      color: black;
+      font-size: 50px;
+  }
+
+  @media (min-width: 375px) {
+    #my-content{
+     width:100%;
+   }
