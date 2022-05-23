@@ -66,6 +66,6 @@ p {font-family: 'Roboto', sans-serif;
     height: 50%;
   }
 
-  @media all(max-width: 375px) {
+  @media(max-width: 375px) {
 
   }
