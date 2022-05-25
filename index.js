@@ -16,6 +16,10 @@ function render(state = Store.Home) {
   router.updatePageLinks();
   AfterRender();
 
+  axios.get(
+    `https://api.themoviedb.org/3/movie/550?api_key=58502811790516eac42968bf6f3756b2`
+  );
+
   function AfterRender() {
     document
       .querySelector(".fa-bars")
