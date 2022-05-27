@@ -1,5 +1,3 @@
-export default {
-  header: "My Home Page",
-  view: "Home",
-  weather: {}
-};
+export { default as Home } from "./Home";
+
+export { default as Links } from "./Links";
