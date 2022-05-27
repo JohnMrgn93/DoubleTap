@@ -1,4 +1,4 @@
-import { Header, Nav, Main, Footer } from "./components/views";
+import { Header, Nav, Main, Footer } from "./components";
 import * as Store from "./Store";
 import Navigo from "navigo";
 import { capitalize } from "lodash";
@@ -17,7 +17,7 @@ function render(state = Store.Home) {
   AfterRender();
 
   axios.get(
-    `https://api.themoviedb.org/3/movie/550?api_key=58502811790516eac42968bf6f3756b2`
+    `https://api.themoviedb.org/3/movie/550?api_key=${process.env.API_KEY}`
   );
 
   function AfterRender() {
