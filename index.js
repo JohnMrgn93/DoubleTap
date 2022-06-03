@@ -17,7 +17,13 @@ function render(state = Store.Home) {
   AfterRender();
 
   axios.get(
-    `https://api.themoviedb.org/3/movie/550?api_key=${process.env.API_KEY}`
+    `https://api.themoviedb.org/3/movie/550?api_key=${process.env.API_KEY}`.then(
+      response => {
+        console.log(response.data);
+        Store.Pizza.pizzas.push(response.data);
+        router.navigate("/Pizza");
+      }
+    )
   );
 
   function AfterRender() {

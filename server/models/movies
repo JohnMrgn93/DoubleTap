@@ -1,0 +1,40 @@
+const mongoose = require("mongoose");
+
+const movieSchema = new mongoose.Schema({
+  customer: {
+    type: String,
+    required: true,
+    validate: /^[A-Za-z0-9 ]*$/
+  },
+  genre: {
+    type: String,
+    required: true,
+    enum: [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Fantasy",
+      "Sci Fi",
+      "Thriller",
+      "Romance",
+      "Drama",
+      "Musical",
+      "Documentary"
+    ]
+  },
+
+  Rating: {
+    type: String,
+    required: true,
+    enum: ["G", "PG", "PG-13", "R"]
+  },
+
+  type: String,
+    required: true,
+    validate: /^[A-Za-z0-9 ]*$/
+  },
+
+
+const movie = mongoose.model("Movie", movieSchema);
+
+module.exports = Movie;

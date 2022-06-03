@@ -1,6 +1,10 @@
 import html from "html-literal";
 
 export default () => html`
+  <p>
+    We hope your enjoying the site. If you have any ideas on where we can
+    improve let us know below.
+  </p>
   <form
     id="fs-frm"
     name="simple-contact-form"
