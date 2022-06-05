@@ -8,15 +8,6 @@ export default links => html`
         link =>
           `<li><a href="/${link.title}" title="${link.title}" data-navigo>${link.text}</a></li>`
       )}
-      <nav class="Nav-bar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="About.html">Who we Are</a></li>
-          <li><a href="Contact.html">Contact Us</a></li>
-          <li><a href="News.html">Entertainment News</a></li>
-        </ul>
-      </nav>
-      ;
     </ul>
   </nav>
 `;

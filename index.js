@@ -22,7 +22,6 @@ axios
   .then(response => {})
   .catch(err => {
     console.log(err);
-    done();
   });
 
 function AfterRender() {
