@@ -1,4 +1,4 @@
 export default {
-  header: "DoubleTap Movie Critics",
+  header: "Shared Voice",
   view: "Home"
 };

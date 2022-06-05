@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const movieSchema = new mongoose.Schema({
+const MoviesSchema = new mongoose.Schema({
   customer: {
     type: String,
     required: true,
@@ -12,12 +12,13 @@ const movieSchema = new mongoose.Schema({
     enum: [
       "Action",
       "Adventure",
+      "Animation",
       "Comedy",
+      "Drama",
       "Fantasy",
-      "Sci Fi",
+      "Science Fiction",
       "Thriller",
       "Romance",
-      "Drama",
       "Musical",
       "Documentary"
     ]
@@ -35,6 +36,6 @@ const movieSchema = new mongoose.Schema({
   },
 
 
-const movie = mongoose.model("Movie", movieSchema);
+const Movies = mongoose.model("Movies", MoviesSchema);
 
-module.exports = Movie;
+module.exports = Movies;

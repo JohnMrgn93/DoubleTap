@@ -9,7 +9,7 @@ export default () => html`
   </p>
 
   <div id="The Voices">
-    <h2>The Voices</h2>
+    <h2>The Voice</h2>
     <p>
       John Morgan also know as Sandy Ravage is the founder of the "Shared
       Voices" concept. John's passion for film started at the tender age of five
