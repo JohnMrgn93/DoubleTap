@@ -168,4 +168,11 @@ body {
             margin-right: 3%;
           }
 
+          Footer {font-style: oblique 40deg;
+            font-size: 25px;
+            color: white;
+    display: flex;
+    justify-content: left;
+}
+
 

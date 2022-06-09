@@ -1,4 +1,4 @@
 export default {
-  header: "Entertainment News",
+  header: "What Are Genres?",
   view: "News"
 };
