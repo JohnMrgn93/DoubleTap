@@ -36,4 +36,5 @@ export default () => html`
       <input type="submit" name="submit" value="Submit Selections" />
     </form>
   </section>
+  import "github.com/ryanbradynd05/go-tmdb"
 `;
