@@ -38,7 +38,8 @@ router.hooks({
         url: "https://online-movie-database.p.rapidapi.com/auto-complete",
         params: { q: "Star Wars" },
         headers: {
-          "X-RapidAPI-Key": `${process.env.Key}`,
+          "X-RapidAPI-Key":
+            "cd975feb43msh18bff400302a2c5p11fb9cjsne79d1466a63c",
           "X-RapidAPI-Host": "online-movie-database.p.rapidapi.com"
         }
       };
@@ -47,6 +48,7 @@ router.hooks({
         .request(options)
         .then(function(response) {
           console.log(response.data);
+          done();
         })
         .catch(err => {
           console.log(err);
