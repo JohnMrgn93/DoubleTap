@@ -36,7 +36,7 @@ router.hooks({
       const options = {
         method: "GET",
         url: "https://online-movie-database.p.rapidapi.com/auto-complete",
-        params: { q: "Star Wars" },
+        params: { q: "" },
         headers: {
           "X-RapidAPI-Key":
             "cd975feb43msh18bff400302a2c5p11fb9cjsne79d1466a63c",

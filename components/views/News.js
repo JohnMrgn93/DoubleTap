@@ -34,7 +34,7 @@ export default () => html`
   </p>
 
   <h2>Action</h2>
-  <p>
+  <p id="Stuff">
     Action Films: This major genre type includes films that have tremendous
     impact, continuous high energy, lots of physical stunts and activity,
     possibly extended chase scenes, races, rescues, battles, martial arts,
@@ -66,7 +66,7 @@ export default () => html`
   </p>
 
   <h2>Adventure</h2>
-  <p>
+  <p id="Stuff">
     Adventure Films are exciting stories, with new experiences or exotic
     locales. Adventure films are very similar to the action film genre, in that
     they are designed to provide an action-filled, energetic experience for the
@@ -97,7 +97,7 @@ export default () => html`
   </p>
 
   <h2>Animated</h2>
-  <p>
+  <p id="Stuff">
     Animated Films are ones in which individual drawings, paintings, or
     illustrations are photographed frame by frame (stop-frame cinematography).
     Usually, each frame differs slightly from the one preceding it, giving the
@@ -110,7 +110,7 @@ export default () => html`
   </p>
 
   <h2>Comedy</h2>
-  <p>
+  <p id="Stuff">
     Comedy Films are "make 'em laugh" films designed to elicit laughter from the
     audience. Comedies are light-hearted dramas, crafted to amuse, entertain,
     and provoke enjoyment. The comedy genre humorously exaggerates the
@@ -121,7 +121,7 @@ export default () => html`
   </p>
 
   <h2>Drama</h2>
-  <p>
+  <p id="Stuff">
     Drama Films are serious presentations or stories with settings or life
     situations that portray realistic characters in conflict with either
     themselves, others, or forces of nature. A dramatic film shows us human
@@ -146,7 +146,7 @@ export default () => html`
   </p>
 
   <h2>Documentary</h2>
-  <p>
+  <p id="Stuff">
     Documentary Films strictly speaking, are non-fictional, "slice of life"
     factual works of art - and sometimes known as cinema verite. For many years,
     as films became more narrative-based, documentaries branched out and took
@@ -155,7 +155,7 @@ export default () => html`
   </p>
 
   <h2>Fantasy</h2>
-  <p>
+  <p id="Stuff">
     Fantasy Films: Unlike science fiction films that base their content upon
     some degree of scientific truth, take the audience to netherworld,
     fairy-tale places where events are unlikely to occur in real life. In
@@ -168,7 +168,7 @@ export default () => html`
   </p>
 
   <h2>Horror</h2>
-  <p>
+  <p id="Stuff">
     Horror Films are unsettling films designed to frighten and panic, cause
     dread and alarm, and to invoke our hidden worst fears, often in a
     terrifying, shocking finale, while captivating and entertaining us at the
@@ -188,7 +188,7 @@ export default () => html`
   </p>
 
   <h2>Musical</h2>
-  <p>
+  <p id="Stuff">
     Musicals / Dance Films are cinematic forms that emphasize and showcase
     full-scale song and dance routines in a significant way (usually with a
     musical or dance performance as part of the film narrative, or as an
@@ -204,7 +204,7 @@ export default () => html`
 
   <h2>Science Fiction</h2>
 
-  <p>
+  <p id="Stuff">
     Science Fiction Films are usually scientific, visionary, comic-strip-like,
     and imaginative, and usually visualized through fanciful, imaginative
     settings, expert film production design, advanced technology gadgets, robots
@@ -248,7 +248,7 @@ export default () => html`
     impact of technological and environmental change on contemporary society.
   </p>
   <h2>Thriller</h2>
-  <p>
+  <p id="Stuff">
     Thriller and Suspense Films: These are types of films known to promote
     intense excitement, suspense, a high level of anticipation, ultra-heightened
     expectation, uncertainty, anxiety, and nerve-wracking tension. Thriller and
