@@ -14,29 +14,32 @@ function render(state = Store.Home) {
     ${Footer()}
   `;
   router.updatePageLinks();
-  AfterRender();
+  AfterRender(state);
 }
 
-function AfterRender() {
+function AfterRender(state) {
   document
     .querySelector(".fa-bars")
     .addEventListener("click", () =>
       document.querySelector("nav > ul").classList.toggle("hidden--mobile")
     );
-}
 
-router.hooks({
-  before: (done, params) => {
-    let view = "Home";
-    if (params && params.data && params.data.view) {
-      view = capitalize(params.data.view);
+  if (state.view === "Movies") {
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
+      const inputList = event.target.elements;
     }
 
-    if (view === "Home") {
+      const requestData = {
+        genre: inputList.genre.value,
+        rating: inputList.rating.value
+      };
+
       const options = {
         method: "GET",
-        url: "https://online-movie-database.p.rapidapi.com/auto-complete",
-        params: { q: "" },
+        url:
+          "https://online-movie-database.p.rapidapi.com/title/v2/get-popular-movies-by-genre",
+        params: { genre: "action", limit: "10" },
         headers: {
           "X-RapidAPI-Key":
             "cd975feb43msh18bff400302a2c5p11fb9cjsne79d1466a63c",
@@ -48,28 +51,24 @@ router.hooks({
         .request(options)
         .then(function(response) {
           console.log(response.data);
-          done();
         })
-        .catch(err => {
-          console.log(err);
-          done();
+        .catch(function(error) {
+          console.error(error);
         });
-    } else if (view === "Pizza") {
-      axios
-        .get(`${process.env.PIZZA_PLACE_API_URL}`)
-        .then(response => {
-          Store.Pizza.pizzas = response.data;
-          done();
-        })
-        .catch(error => {
-          console.log("It puked", error);
-          done();
-        });
-    } else {
-      done();
-    }
+    });
   }
-});
+}
+
+// router.hooks({
+//   before: (done, params) => {
+//     let view = "Home";
+//     if (params && params.data && params.data.view) {
+//       view = capitalize(params.data.view);
+//     } else {
+//       done();
+//     }
+//   }
+// });
 
 router
   .on({
