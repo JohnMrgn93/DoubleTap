@@ -28,7 +28,13 @@ function AfterRender(state) {
     document.querySelector("form").addEventListener("submit", event => {
       event.preventDefault();
       const inputList = event.target.elements;
-    }
+
+      const toppings = [];
+      for (let input of inputList.toppings) {
+        if (input.checked) {
+          toppings.push(input.value);
+        }
+      }
 
       const requestData = {
         genre: inputList.genre.value,
