@@ -29,16 +29,15 @@ function AfterRender(state) {
       event.preventDefault();
       const inputList = event.target.elements;
 
-      const toppings = [];
+      const movies = [];
       for (let input of inputList.toppings) {
         if (input.checked) {
-          toppings.push(input.value);
+          movies.push(input.value);
         }
       }
-
       const requestData = {
-        genre: inputList.genre.value,
-        rating: inputList.rating.value
+        Genre: inputList.Genre.value,
+        Rating: inputList.Rating.value
       };
 
       const options = {
