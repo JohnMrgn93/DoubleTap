@@ -30,7 +30,7 @@ function AfterRender(state) {
       const inputList = event.target.elements;
 
       const movies = [];
-      for (let input of inputList.toppings) {
+      for (let input of inputList) {
         if (input.checked) {
           movies.push(input.value);
         }
@@ -40,25 +40,15 @@ function AfterRender(state) {
         Rating: inputList.Rating.value
       };
 
-      const options = {
-        method: "GET",
-        url:
-          "https://online-movie-database.p.rapidapi.com/title/v2/get-popular-movies-by-genre",
-        params: { genre: "action", limit: "10" },
-        headers: {
-          "X-RapidAPI-Key":
-            "cd975feb43msh18bff400302a2c5p11fb9cjsne79d1466a63c",
-          "X-RapidAPI-Host": "online-movie-database.p.rapidapi.com"
-        }
-      };
-
       axios
-        .request(options)
-        .then(function(response) {
+        .post(`${process.env.THE_MOVIE_DATABASE_API_URL}`, requestData)
+        .then(response => {
           console.log(response.data);
+          Store.Movies.movie.push(response.data);
+          router.navigate("/Movies");
         })
-        .catch(function(error) {
-          console.error(error);
+        .catch(error => {
+          console.log(error);
         });
     });
   }
@@ -66,7 +56,7 @@ function AfterRender(state) {
 
 // router.hooks({
 //   before: (done, params) => {
-//     let view = "Home";
+//     let view = "Movies";
 //     if (params && params.data && params.data.view) {
 //       view = capitalize(params.data.view);
 //     } else {

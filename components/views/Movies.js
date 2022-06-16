@@ -23,17 +23,6 @@ export default () => html`
       </div>
 
       <div>
-        <label for="Genre">Genre:</label>
-        <input
-          type="submit"
-          name="Genre"
-          id="Genre"
-          placeholder="Select Genre"
-          required
-        />
-      </div>
-
-      <div>
         <label for="Rating">Rating:</label>
         <select id="Rating" name="Rating">
           <option value="">Select a Rating</option>
