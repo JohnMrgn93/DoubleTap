@@ -45,7 +45,7 @@ body {
   }
 
   li {
-    font-size: 50;
+    font-size: 40px;
     float: left;
     text-align: center;
 
@@ -109,7 +109,7 @@ body {
             background-color: white;
             outline-style: solid;
             outline-width: thin;
-            outline-color: gray;
+            outline-color: grey;
             outline-offset: -1px;
           }
           #fs-frm [type="text"],
@@ -170,22 +170,40 @@ body {
           #fs-frm fieldset.locale select[name="state"] {
             margin-right: 3%;
           }
+
           form {
             box-sizing: border-box;
-            padding: 2rem;
-            border-radius: 1rem;
+            width: 50%;
+            padding: 1rem;
+            border-radius: 0rem;
             background-color: hsl(0, 0%, 100%);
-            border: 4px solid hsl(0, 0%, 90%);
+            border: 10px solid hsl(0, 0%, 90%);
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr -10fr;
             gap: 2rem;
           }
+
+          form {
+            box-sizing: border-box;
+            width: 50%;
+            padding: 1rem;
+            border-radius: 0rem;
+            background-color: hsl(0, 0%, 100%);
+            border: 10px solid hsl(0, 0%, 90%);
+            display: flex;
+            justify-content: center;
+            grid-template-columns: 1fr -10fr;
+            gap: 2rem;
+          }
+
+
 
           Footer {font-style: oblique;
             font-size: 20px;
             color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 

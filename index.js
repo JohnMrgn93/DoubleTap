@@ -37,28 +37,6 @@ function AfterRender(state) {
           console.log(response.data.results);
           Store.Movies.movies = response.data.results;
         });
-
-      const movies = [];
-      for (let input of inputList) {
-        if (input.checked) {
-          movies.push(input.value);
-        }
-      }
-      const requestData = {
-        Genre: inputList.Genre.value,
-        Rating: inputList.Rating.value
-      };
-
-      axios
-        .post(`${process.env.THE_MOVIE_DATABASE_API_URL}`, requestData)
-        .then(response => {
-          console.log(response.data);
-          Store.Movies.movie.push(response.data);
-          router.navigate("/Movies");
-        })
-        .catch(error => {
-          console.log(error);
-        });
     });
   }
 }

@@ -5,6 +5,10 @@ export default () => html`
     We hope your enjoying the site. If you have any ideas on where we can
     improve let us know below.
   </p>
+  <p>
+    We hope your enjoying the site. If you have any ideas on where we can
+    improve let us know below.
+  </p>
   <form
     id="fs-frm"
     name="simple-contact-form"
@@ -26,7 +30,7 @@ export default () => html`
         type="email"
         name="_replyto"
         id="email-address"
-        placeholder="email...."
+        placeholder="Email...."
         required=""
       />
       <label for="message">Message</label>
@@ -34,7 +38,7 @@ export default () => html`
         rows="5"
         name="message"
         id="message"
-        placeholder="Questions, comments and concerns...."
+        placeholder="Questions, Comments and Concerns...."
         required=""
       ></textarea>
       <input
