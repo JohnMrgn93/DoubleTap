@@ -29,6 +29,15 @@ function AfterRender(state) {
       event.preventDefault();
       const inputList = event.target.elements;
 
+      axios
+        .get(
+          `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.MOVIEDB_API_KEY}&with_genres=${inputList.Genre.value}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate&&certification-country=US&certification=${inputList.Rating.value}`
+        )
+        .then(response => {
+          console.log(response.data.results);
+          Store.Movies.movies = response.data.results;
+        });
+
       const movies = [];
       for (let input of inputList) {
         if (input.checked) {
@@ -53,18 +62,6 @@ function AfterRender(state) {
     });
   }
 }
-
-// router.hooks({
-//   before: (done, params) => {
-//     let view = "Movies";
-//     if (params && params.data && params.data.view) {
-//       view = capitalize(params.data.view);
-//     } else {
-//       done();
-//     }
-//   }
-// });
-
 router
   .on({
     "/": () => render(),
